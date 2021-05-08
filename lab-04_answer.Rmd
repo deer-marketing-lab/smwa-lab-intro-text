@@ -33,14 +33,15 @@ Add your solutions to the `lab-04_answer.Rmd` file as you work through the exerc
 Obtain a copy of both the question and answer files using Git.
 To clone a copy of this repository to your own PC, use the following command:
 
+```{bash, eval = FALSE}
+$ git clone https://github.com/tisem-digital-marketing/smwa-lab-04.git
+```
 
 Once you have your copy, open the answer document in RStudio as an RStudio project and work through the questions.
 
 The goal of the tutorials is to explore how to "do" the technical side of social media analytics.
 Use this as an opportunity to push your limits and develop new skills.
 When you are uncertain or do not know what to do next - ask questions of your peers and the instructors on the class Slack channel `#lab-04-discussion`.
-
-\newpage
 
 ## Exercise 1: Text Analytics with Fake Reviews
 
@@ -91,8 +92,12 @@ library(wordcloud)
 
 1. Assuming online reviews are all truthful, explain whether they should benefit or harm consumers and the hotels themselves.
 
+**Write your answer here**
+
 2. If fake reviews are mixed in with truthful reviews on a website (for example, TripAdvisor) identify two reasons why their presence may harm consumers, hotels and the review website. 
 Explain the mechanisms through which the harm is done.
+
+**Write your answer here**
 
 3. Load the data located in `data/reviews` into a data frame called `hotel_reviews`.
 
@@ -142,6 +147,8 @@ Merge the the `review_length` data into the `hotels_df` dataset.
    
 8. What are stop words? 
 Explain why you would want to remove them from the review text.
+
+**Write your answer here**
    
 9. Remove stop words from each review using a default stop word list. Name the dataset with no stop words `tidy_reviews_no_stop`.
    What are the 20 most common words in the dataset?
@@ -163,6 +170,16 @@ Remove these words from `tidy_reviews_no_stop`.
 
 The following code can be used to get started:
 
+```{r, eval = FALSE}
+# First, find all numbers:
+nums <- YOUR_CODE %>%
+  # find all numbers in the data
+  filter(str_detect(word, "^[0-9]")) %>%
+  YOUR_CODE
+
+# now remove those:
+tidy_reviews_no_stop <- YOUR_CODE
+```
 
 ```{r}
 # Write your answer here
@@ -181,7 +198,10 @@ To lemmatize each word in the reviews we will use the `lemmatize_words()` from t
 ]
 
 ```{r}
-# Write your answer here
+# Uncomment code below when you get to this point
+# tidy_reviews_lemma <- 
+#     tidy_reviews_no_stop %>%
+#     mutate(word_lemma = lemmatize_words(word))
 ```
 
 
@@ -190,6 +210,9 @@ To help you in coding up this plot, your final result should look like the follo
 Depending on your custom stopword list in (10) you might see slight differences between your figure and this one.
 ]
 
+```{r, echo = FALSE, eval = TRUE, fig.align="center", out.width="75%"}
+knitr::include_graphics('figs/reviews_plot-01.png')
+```
 
   Perform the following steps:
   
@@ -199,6 +222,33 @@ Depending on your custom stopword list in (10) you might see slight differences 
 
 To assist you in creating the plot, use the following starter code:
 
+```{r, eval = FALSE}
+# part (a)
+wrd_frequency <- tidy_reviews_lemma %>%
+  count(YOUR_CODE) %>%
+  group_by(YOUR_CODE) %>%
+  mutate(YOUR_CODE) %>% 
+  spread(YOUR_CODE)
+
+# part (b)
+wrd_frequency %>%
+  ggplot(aes(x = YOUR_CODE, 
+             y = YOUR_CODE, 
+             label = YOUR_CODE 
+           )) +
+  geom_YOURCODE(alpha = 0.15, 
+                size = 2.5
+              ) +
+  geom_text(aes(label = YOUR_CODE), 
+            check_overlap = TRUE, 
+            vjust = 1.5
+            ) +
+  geom_abline(YOUR_CODE,
+              lty = 2, 
+              color = "grey40"
+              ) +
+  YOUR_CODE
+```
 
 ```{r}
 # Write your answer here
@@ -208,7 +258,18 @@ To assist you in creating the plot, use the following starter code:
 An alternative way to visualize the differences and commonalities in word use between truthful and deceptive reviews is to construct word clouds.
 To assist you in creating the plots, use the following starter code for each of the next two questions:
 
-
+```{r, eval=FALSE}
+tidy_reviews_lemma %>%
+  count(YOUR_CODE, 
+        YOUR_CODE, 
+        sort = TRUE
+        ) %>%
+  acast(YOUR_CODE ~ YOUR_CODE, 
+        value.var = "n", 
+        fill = 0
+        ) %>%
+  YOUR_CODE
+```
       
 13. Create a word cloud that visualizes the differences in word use between deceptive and truthful reviews. 
 Use a maximum of 75 words in the word cloud.
@@ -228,10 +289,14 @@ Use a maximum of 75 words in the word cloud.
 
 15. Provide a brief summary of what you learn from the three plots. (Max. 10 sentences)
 
+**Write your answer here**
+
 16. In their 2014 AER article, Mayzlin, Dover and Chevalier argue that fake/deceptive reviews are difficult to detect.^[
   Mayzlin, Dina, Yaniv Dover, and Judith Chevalier. 2014. "Promotional Reviews: An Empirical Investigation of Online Review Manipulation." American Economic Review, 104 (8): 2421-55.
 ] 
 Based on your analysis, do you agree with their presumption? Explain the marketing implications of your conclusions. (max. 10 sentences)
+
+**Write your answer here**
 
 17. (Harder!) Suppose you were working in an analytics team that wanted to build a predictive model to detect fake reviews on a platform such as TripAdvisor.
 
@@ -242,3 +307,5 @@ You can use any combination of words, figures, simple equations or pseudocode to
 If you detected a newly posted review was fake, would you want to remove it from the platform? 
 Or would you leave the review online with a notification that this review might be fake? 
 Explain.
+
+**Write your answer here**
