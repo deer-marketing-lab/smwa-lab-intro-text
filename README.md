@@ -27,7 +27,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Suggested Citation
 
-Deer, Lachlan and de With, Hendrik. 2021. Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics. Tilburg University. url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
+Deer, Lachlan. 2022. Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics. Tilburg University. url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
 
 ```{r, engine='out', eval = FALSE}
 @misc{smwa_lab04_2022,
