@@ -33,15 +33,14 @@ Add your solutions to the `lab-04_answer.Rmd` file as you work through the exerc
 Obtain a copy of both the question and answer files using Git.
 To clone a copy of this repository to your own PC, use the following command:
 
-```{bash, eval = FALSE}
-$ git clone https://github.com/tisem-digital-marketing/smwa-lab-04.git
-```
 
 Once you have your copy, open the answer document in RStudio as an RStudio project and work through the questions.
 
 The goal of the tutorials is to explore how to "do" the technical side of social media analytics.
 Use this as an opportunity to push your limits and develop new skills.
 When you are uncertain or do not know what to do next - ask questions of your peers and the instructors on the class Slack channel `#lab-04-discussion`.
+
+\newpage
 
 ## Exercise 1: Text Analytics with Fake Reviews
 
@@ -57,20 +56,7 @@ The data contains 1600 reviews:
 * 400 truthful, negative reviews from Expedia, Hotels.com, Orbitz, Priceline, TripAdvisor, and Yelp
 * 400 deceptive negative reviews from Mechanical Turk
 
-To gain access to the data, run the following code to download it and save it in the file `data/reviews.csv`:
-
-```{r, cache= TRUE, message = FALSE}
-library(googledrive)
-
-data_id <- "1WJTEJ3zjDh8Bi7v1JqGIc62sN9LKPVAw"
-out_file <- "data/reviews.csv"
-
-drive_download(
-  as_id(data_id), 
-  path = out_file, 
-  overwrite = TRUE)
-
-```
+The data is saved as part of this repository, stored in `data/reviews.csv`:
 
 You might need to use the following `R` libraries throughout this exercise:^[
     If you haven't installed one or more of these packages, do so by entering `install.packages("PKG_NAME")` into the R console and pressing ENTER.
@@ -92,12 +78,12 @@ library(wordcloud)
 
 1. Assuming online reviews are all truthful, explain whether they should benefit or harm consumers and the hotels themselves.
 
-**Write your answer here**
+Write your answer here
 
 2. If fake reviews are mixed in with truthful reviews on a website (for example, TripAdvisor) identify two reasons why their presence may harm consumers, hotels and the review website. 
 Explain the mechanisms through which the harm is done.
 
-**Write your answer here**
+Write your answer here
 
 3. Load the data located in `data/reviews` into a data frame called `hotel_reviews`.
 
@@ -148,7 +134,7 @@ Merge the the `review_length` data into the `hotels_df` dataset.
 8. What are stop words? 
 Explain why you would want to remove them from the review text.
 
-**Write your answer here**
+Write your answer here
    
 9. Remove stop words from each review using a default stop word list. Name the dataset with no stop words `tidy_reviews_no_stop`.
    What are the 20 most common words in the dataset?
@@ -181,6 +167,7 @@ nums <- YOUR_CODE %>%
 tidy_reviews_no_stop <- YOUR_CODE
 ```
 
+
 ```{r}
 # Write your answer here
 ```
@@ -198,10 +185,7 @@ To lemmatize each word in the reviews we will use the `lemmatize_words()` from t
 ]
 
 ```{r}
-# Uncomment code below when you get to this point
-# tidy_reviews_lemma <- 
-#     tidy_reviews_no_stop %>%
-#     mutate(word_lemma = lemmatize_words(word))
+# Write your answer here
 ```
 
 
@@ -250,6 +234,7 @@ wrd_frequency %>%
   YOUR_CODE
 ```
 
+
 ```{r}
 # Write your answer here
 ```
@@ -270,6 +255,7 @@ tidy_reviews_lemma %>%
         ) %>%
   YOUR_CODE
 ```
+
       
 13. Create a word cloud that visualizes the differences in word use between deceptive and truthful reviews. 
 Use a maximum of 75 words in the word cloud.
@@ -289,23 +275,30 @@ Use a maximum of 75 words in the word cloud.
 
 15. Provide a brief summary of what you learn from the three plots. (Max. 10 sentences)
 
-**Write your answer here**
+Write your answer here
 
 16. In their 2014 AER article, Mayzlin, Dover and Chevalier argue that fake/deceptive reviews are difficult to detect.^[
   Mayzlin, Dina, Yaniv Dover, and Judith Chevalier. 2014. "Promotional Reviews: An Empirical Investigation of Online Review Manipulation." American Economic Review, 104 (8): 2421-55.
 ] 
 Based on your analysis, do you agree with their presumption? Explain the marketing implications of your conclusions. (max. 10 sentences)
 
-**Write your answer here**
+Write your answer here
 
 17. (Harder!) Suppose you were working in an analytics team that wanted to build a predictive model to detect fake reviews on a platform such as TripAdvisor.
 
 (a) Can you sketch out a method/model to predict whether a review is fake? Your method should be scaleable so that it can handle thousands of new reviews per day.
 You can use any combination of words, figures, simple equations or pseudocode to explain your thoughts.
+
+Write your answer here
+
 (b) How could you assess how successful the model is at detecting fake reviews?
+
+Write your answer here
+
 (c) Suppose the model was adopted by the platform.
 If you detected a newly posted review was fake, would you want to remove it from the platform? 
 Or would you leave the review online with a notification that this review might be fake? 
 Explain.
 
-**Write your answer here**
+Write your answer here
+
