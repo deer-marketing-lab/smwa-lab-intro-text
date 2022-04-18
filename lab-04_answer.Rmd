@@ -85,7 +85,7 @@ Explain the mechanisms through which the harm is done.
 
 Write your answer here
 
-3. Load the data located in `data/reviews` into a data frame called `hotel_reviews`.
+3. Load the data located in `data/reviews.csv` into a data frame called `hotel_reviews`.
 
 ```{r}
 # Write your answer here
