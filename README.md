@@ -1,14 +1,14 @@
 # Social Media and Web Analytics: Lab 4
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![lifecycle](https://img.shields.io/badge/version-2021-red.svg)]()
+[![lifecycle](https://img.shields.io/badge/version-2022-red.svg)]()
 
 ## Meta-Information
 
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
-* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/2021-smwa)
+* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/2022-smwa)
 * Institute: Dept of Marketing, Tilburg University
-* Current Version: [2021 edition](https://tisem-digital-marketing.github.io/2021-smwa)
+* Current Version: [2022 edition](https://tisem-digital-marketing.github.io/2022-smwa)
 
 ## Instructions for Students
 
@@ -30,10 +30,10 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 Deer, Lachlan and de With, Hendrik. 2021. Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics. Tilburg University. url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
 
 ```{r, engine='out', eval = FALSE}
-@misc{smwa_lab04_2021,
+@misc{smwa_lab04_2022,
       title={"Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics"},
-      author={Lachlan Deer and Hendrik de With},
-      year={2021},
+      author={Lachlan Deer},
+      year={2022},
       url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
 }
 ```
