@@ -1,4 +1,4 @@
-# Social Media and Web Analytics: Lab 4
+# Social Media and Web Analytics: Lab Assignment - Intro to Text Analytics
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![lifecycle](https://img.shields.io/badge/version-2022-red.svg)]()
@@ -6,9 +6,9 @@
 ## Meta-Information
 
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
-* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/2022-smwa)
+* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/2024-smwa)
 * Institute: Dept of Marketing, Tilburg University
-* Current Version: [2022 edition](https://tisem-digital-marketing.github.io/2022-smwa)
+* Current Version: [2024 edition](https://tisem-digital-marketing.github.io/2024-smwa)
 
 ## Instructions for Students
 
@@ -16,7 +16,7 @@ Clone a copy of this repository using Git.
 To clone a copy of this repository to your own PC:
 
 ```{bash, eval = FALSE}
-git clone https://github.com/tisem-digital-marketing/smwa-lab-04.git
+git clone https://github.com/tisem-digital-marketing/smwa-lab-intro-text.git
 ```
 
 Once you have cloned the files, open the cloned repository in RStudio as an RStudio project and work through the questions.
@@ -27,13 +27,13 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Suggested Citation
 
-Deer, Lachlan. 2022. Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics. Tilburg University. url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
+Deer, Lachlan. 2022. Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics. Tilburg University. url = "https://github.com/tisem-digital-marketing/smwa-lab-intro-text"
 
 ```{r, engine='out', eval = FALSE}
-@misc{smwa_lab04_2022,
-      title={"Social Media and Web Analytics: Lab 4 - Introduction to Text Analytics"},
+@misc{smwa_lab_introtext,
+      title={"Social Media and Web Analytics: Lab Assignment - Introduction to Text Analytics"},
       author={Lachlan Deer},
-      year={2022},
-      url = "https://github.com/tisem-digital-marketing/smwa-lab-04"
+      year={2024},
+      url = "https://github.com/tisem-digital-marketing/smwa-lab-intro-text"
 }
 ```
